@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ dev ]
 jobs:
-  runs-on: ubuntu-latest
   createrelease:
     name: Create Release
     runs-on: [ubuntu-latest]
