@@ -1,7 +1,16 @@
 dearpygui==1.1.3
 DateTime==4.3
 ffmpeg==1.4
-
+ffmpeg-python==0.2.0
+ffprobe==0.5
+pyinstaller==4.7
+pyinstaller-hooks-contrib==2021.3
+python-dateutil==2.8.2
+websockets==10.1
+yt-dlp==2021.12.25
+dearpygui==1.1.3
+DateTime==4.3
+ffmpeg==1.4
 ffmpeg-python==0.2.0
 ffprobe==0.5
 pyinstaller==4.7
