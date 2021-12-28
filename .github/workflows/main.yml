@@ -2,9 +2,9 @@
 name: Build binaries
 on:
   push:
-    branches: [ dev2 ]
+    branches: [ dev3 ]
   pull_request:
-    branches: [ dev2]
+    branches: [ dev3]
 jobs:
   createrelease:
     name: Create Release
