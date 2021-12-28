@@ -6,15 +6,11 @@ on:
   pull_request:
     branches: [ dev ]
 jobs:
-  wget:
-      runs-on: ubuntu-latest
-      steps:
-
+  runs-on: ubuntu-latest
   createrelease:
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
-    
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -93,22 +89,4 @@ jobs:
       uses: actions/download-artifact@v1
       with:
         name: release_url
- 
 
- #in steps 
-       # - name: wget
-      #   uses: wei/wget@v1
-      #   with:
-      #     args: https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
-      #     artifact_name: ffmpeg-master-latest-win64-gpl.zip
-          
-      # - name: Decompress
-      #   uses: TonyBogdanov/zip@1.0
-      #   with:
-      #       args: unzip -qq ffmpeg-master-latest-win64-gpl.zip -d ffmpeg
-    
-      # - name: copy file
-      #   uses: canastro/copy-file-action@master
-      #   with:
-      #     source: ffmpeg/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe
-      #     target: "ffmpeg.exe"
