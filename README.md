@@ -7,8 +7,6 @@ uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_d
 
 
 
-
-
 ### features:
 * Ultra Fast 
 * Download video or audio at the best quality available converted to mp4 with ffmpeg
