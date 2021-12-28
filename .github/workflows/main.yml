@@ -9,22 +9,7 @@ jobs:
   wget:
       runs-on: ubuntu-latest
       steps:
-      # - name: wget
-      #   uses: wei/wget@v1
-      #   with:
-      #     args: https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
-      #     artifact_name: ffmpeg-master-latest-win64-gpl.zip
-          
-      # - name: Decompress
-      #   uses: TonyBogdanov/zip@1.0
-      #   with:
-      #       args: unzip -qq ffmpeg-master-latest-win64-gpl.zip -d ffmpeg
-    
-      # - name: copy file
-      #   uses: canastro/copy-file-action@master
-      #   with:
-      #     source: ffmpeg/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe
-      #     target: "ffmpeg.exe"
+
   createrelease:
     name: Create Release
     runs-on: [ubuntu-latest]
@@ -57,8 +42,8 @@ jobs:
         include:
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: pyinstaller -F -w -n fastestTube -i src/tube.ico src/fastestTube.py
-            OUT_FILE_NAME: fastestTube.exe
+            CMD_BUILD: pyinstaller -F -w -n fastesTube -i src/tube.ico src/fastestTube.py
+            OUT_FILE_NAME: fastesTube.exe
             ASSET_MIME: application/vnd.microsoft.portable-executable
           - os: macos-latest
             TARGET: macos
@@ -109,3 +94,21 @@ jobs:
       with:
         name: release_url
  
+
+ #in steps 
+       # - name: wget
+      #   uses: wei/wget@v1
+      #   with:
+      #     args: https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
+      #     artifact_name: ffmpeg-master-latest-win64-gpl.zip
+          
+      # - name: Decompress
+      #   uses: TonyBogdanov/zip@1.0
+      #   with:
+      #       args: unzip -qq ffmpeg-master-latest-win64-gpl.zip -d ffmpeg
+    
+      # - name: copy file
+      #   uses: canastro/copy-file-action@master
+      #   with:
+      #     source: ffmpeg/ffmpeg-master-latest-win64-gpl/bin/ffmpeg.exe
+      #     target: "ffmpeg.exe"
