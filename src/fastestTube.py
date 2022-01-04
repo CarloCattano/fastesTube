@@ -110,6 +110,7 @@ def vidSetAV():
     aPlusVideo = not aPlusVideo
 
 def pasteClipboard():
+    
     global vidURL
     vidURL = pyperclip.paste()
     dpg.set_value("urlinput",value=vidURL)
