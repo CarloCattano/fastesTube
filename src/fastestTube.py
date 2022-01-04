@@ -4,8 +4,10 @@
     of unnecessary things and god knows what else. created by Carlo Cattano 26/12/2021 
     https://github.com/CarloCattano  https://vueme.herokuapp.com/#/     ''' 
 
+from typing import Sized
 import dearpygui.dearpygui as dpg  #requires ffmpeg in PATH or binary in the same folder
 from yt_dlp import YoutubeDL
+import pyperclip
 
 dpg.create_context()
 dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="tube.ico",large_icon="tube.ico")
@@ -107,12 +109,25 @@ def vidSetAV():
     global aPlusVideo
     aPlusVideo = not aPlusVideo
 
+def pasteClipboard():
+    global vidURL
+    vidURL = pyperclip.paste()
+    dpg.set_value("urlinput",value=vidURL)
+    dpg.hide_item("popup")
+
+
 with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,height=600,no_close=True,no_resize=True,no_move=True):   
-    dpg.add_input_text(width=500,height=50,callback=setURL)
+    dpg.add_input_text(width=500,height=50,callback=setURL,tag="urlinput")
+
+    #to do : find a way to size the popup window to fit the text
+
+    with dpg.popup(dpg.last_item(),tag="popup"):
+        dpg.add_button(label="Paste",callback=pasteClipboard)
+    
     dpg.add_button(label="Download Audio",width=180,height=40,callback=dl_audio)
     dpg.add_button(label="Download Video",width=180,height=40,callback=dl_video)
-    #add dpg checkbox for audio+video
-    dpg.add_checkbox(label="Audio+Video",callback=vidSetAV,pos=(200,114))
+  
+    dpg.add_checkbox(label="Audio+Video",callback=vidSetAV,pos=(200,114))   #add dpg checkbox for audio+video
 
     with dpg.group(horizontal=True):
         dpg.add_text("Info",tag="dConsole")
