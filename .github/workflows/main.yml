@@ -14,7 +14,8 @@ jobs:
     - name: Copy Asstets
       run: |
         echo "copiying files....."
-        cp -r /src /dist
+        echo ls
+        cp -r ~/src ~/dist
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
