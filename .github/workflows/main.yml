@@ -16,7 +16,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.event.head_commit.message }} #${{ github.ref }}
+        tag_name: "${{ github.event.head_commit.message }}" #${{ github.ref }}
         release_name: "${{ github.event.head_commit.message }}" #Release ${{ github.ref }}
         body: "Must have FFmpeg in same directory or in PATH \n
                     Videos will download to the folder where the fastestTube is \n
@@ -24,7 +24,7 @@ jobs:
                     \n
                     Needs FFmpeg binaries to encode the videos/audios to mp3/mp4 \n
                     Can be downloaded from here for widows/MacOSX \n
-                    https://ffmpeg.org/download.html" \n
+                    https://ffmpeg.org/download.html" 
         draft: false
         prerelease: false
         
