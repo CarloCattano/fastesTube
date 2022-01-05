@@ -4,18 +4,11 @@ on:
   push:
     branches: [ dev ]
 
-  # mkdir dist  
-  # cp ./src ./dist
 jobs:
   createrelease:
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
-    - name: Copy Asstets
-      run: |
-        echo "copiying files....."
-        echo ls
-        cp -r ~/src ~/dist
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -63,6 +56,13 @@ jobs:
             OUT_FILE_NAME: fastesTube.zip
             ASSET_MIME: application/zip
     steps:
+    - uses: actions/checkout@master
+    - name: copy file
+      uses: canastro/copy-file-action@master
+      with:
+        source: "src/tube.ico"
+        target: "./dist/tube.ico"
+
     - uses: actions/checkout@v1
     - name: Set up Python 3.8
       uses: actions/setup-python@v2
