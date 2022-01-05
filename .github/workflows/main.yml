@@ -4,6 +4,8 @@ on:
   push:
     branches: [ dev ]
 
+  # mkdir dist  
+  # cp ./src ./dist
 jobs:
   createrelease:
     name: Create Release
@@ -12,8 +14,7 @@ jobs:
     - name: Copy Asstets
       run: |
         echo "copiying files....."
-        mkdir dist  
-        cp ./src ./dist
+        ls 
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
