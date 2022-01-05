@@ -11,9 +11,9 @@ jobs:
     steps:
     - name: Copy Asstets
       run: |
-      echo "copiying files....."
-      mkdir dist  
-      cp ./src ./dist
+        echo "copiying files....."
+        mkdir dist  
+        cp ./src ./dist
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
