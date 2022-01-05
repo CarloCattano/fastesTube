@@ -10,14 +10,16 @@ uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_d
 * Download entire playlists
 * Download Video with or witout the audio
 ### to do's:
-   * ~~Download entire playlists~~
-   * ~~Implement community Feature requests like(Download Video without audio)~~ 
+   * Add a loading/waiting.. Visual feedback after button download button si pressed
+   * Add a finished mesagge after encoding is done
    * Make a better UI
    * Choose ouput folder and name with default to video Title and current folder
-   * try to create binaries for windows and mac OSX and add to Releases
    * create automatic fading for songs between playlists
    * learn python best practices
    * learn how to use gh Actions CI to create the binaries insted of compiling them locally
+   * ~~try to create binaries for windows and mac OSX and add to Releases~~
+   * ~~Download entire playlists~~
+   * ~~Implement community Feature requests like(Download Video without audio)~~ 
 
 
 ### Instructions:
