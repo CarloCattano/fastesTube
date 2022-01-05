@@ -6,16 +6,14 @@ on:
 
 jobs:
   createrelease:
-    name: Copy Asstets
-    -  shell: bash
-        run: |
-        echo "copiying files....."
-        mkdir dist  
-        cp ./src ./dist
-
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
+    - name: Copy Asstets
+      run: |
+      echo "copiying files....."
+      mkdir dist  
+      cp ./src ./dist
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
