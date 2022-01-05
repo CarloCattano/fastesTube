@@ -10,14 +10,15 @@ jobs:
     steps:
     - name: Create folder
       run: |
-        mkdir -p ./dist
+        echo "hello"
         ls -a .
+        mkdir -p ./dist
     - uses: actions/checkout@v1
     - name: copy file
       uses: canastro/copy-file-action@master
       with:
         source: "./src/tube.ico"
-        target: "./dist/tube.ico"
+        target: "./dist"
 
     - name: Create Release
       id: create_release
