@@ -110,7 +110,7 @@ def vidSetAV():
     aPlusVideo = not aPlusVideo
 
 def pasteClipboard():
-    
+
     global vidURL
     vidURL = pyperclip.paste()
     dpg.set_value("urlinput",value=vidURL)
@@ -121,7 +121,6 @@ with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,he
     dpg.add_input_text(width=500,height=50,callback=setURL,tag="urlinput")
 
     #to do : find a way to size the popup window to fit the text
-
     with dpg.popup(dpg.last_item(),tag="popup"):
         dpg.add_button(label="Paste",callback=pasteClipboard)
     
