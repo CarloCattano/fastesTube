@@ -123,6 +123,7 @@ with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,he
 
     #to do : find a way to size the popup window to fit the text
     #https://github.com/hoffstadt/DearPyGui/issues/1523
+    #modal=True
     with dpg.popup(dpg.last_item(),tag="popup"):
         dpg.add_button(label="Paste",callback=pasteClipboard)
     
