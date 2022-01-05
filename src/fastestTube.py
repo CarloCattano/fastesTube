@@ -116,7 +116,6 @@ def pasteClipboard():
     dpg.set_value("urlinput",value=vidURL)
     dpg.hide_item("popup")
 
-
 with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,height=600,no_close=True,no_resize=True,no_move=True):   
     dpg.add_input_text(width=500,height=50,callback=setURL,tag="urlinput")
 
