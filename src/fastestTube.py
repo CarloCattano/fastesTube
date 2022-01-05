@@ -11,7 +11,7 @@ from yt_dlp import YoutubeDL
 import pyperclip
 
 dpg.create_context()
-dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="tube.ico",large_icon="tube.ico")
+dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="src/tube.ico",large_icon="src/tube.ico") 
 dpg.setup_dearpygui()
 dpg.show_viewport()
 dpg.set_global_font_scale(1)
