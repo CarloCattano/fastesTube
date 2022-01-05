@@ -10,6 +10,7 @@ import dearpygui.dearpygui as dpg  #requires ffmpeg in PATH or binary in the sam
 from yt_dlp import YoutubeDL
 import pyperclip
 
+
 dpg.create_context()
 dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="src/tube.ico",large_icon="src/tube.ico") 
 dpg.setup_dearpygui()
@@ -122,6 +123,7 @@ with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,he
 
     #to do : find a way to size the popup window to fit the text
     #https://github.com/hoffstadt/DearPyGui/issues/1523
+    #modal=True
     with dpg.popup(dpg.last_item(),tag="popup"):
         dpg.add_button(label="Paste",callback=pasteClipboard)
     
