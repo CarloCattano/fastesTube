@@ -7,12 +7,12 @@ on:
 
 jobs:
   createrelease:
-  - name: Copy
-  uses: andstor/copycat-action@v3
-  with:
-    personal_token: ${{ secrets.PERSONAL_TOKEN }}
-    src_path: ./src
-    dst_path: ./dist
+    - name: Copy
+      uses: andstor/copycat-action@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        src_path: ./src
+        dst_path: ./dist
 
     name: Create Release
     runs-on: [ubuntu-latest]
