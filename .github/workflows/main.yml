@@ -55,7 +55,7 @@ jobs:
         include:
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: cp src/tube.ico dist/tube.ico && pyinstaller -F -w -n fastesTube -i src/tube.ico src/fastestTube.py
+            CMD_BUILD: mkdir dist && cp src/tube.ico dist/tube.ico && pyinstaller -F -w -n fastesTube -i src/tube.ico src/fastestTube.py
             OUT_FILE_NAME: fastesTube.exe
             ASSET_MIME: application/vnd.microsoft.portable-executable
           - os: macos-latest
