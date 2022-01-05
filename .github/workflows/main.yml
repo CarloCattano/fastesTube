@@ -4,15 +4,14 @@ on:
   push:
     branches: [ dev ]
 
-
 jobs:
   createrelease:
-      name: Copy
-      uses: andstor/copycat-action@v3
-      with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        src_path: ./src
-        dst_path: ./dist
+  name: Copy Asstets
+  -  shell: bash
+      run: |
+      echo "copiying files....."
+      mkdir dist  
+      cp ./src ./dist
 
     name: Create Release
     runs-on: [ubuntu-latest]
@@ -40,9 +39,9 @@ jobs:
     - name: Save Release URL File for publish
       uses: actions/upload-artifact@v1
       with:
-      
         name: release_url
         path: release_url.txt
+
   build:
     name: Build packages
     needs: createrelease
