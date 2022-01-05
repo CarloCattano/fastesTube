@@ -7,7 +7,7 @@ on:
 
 jobs:
   createrelease:
-    - name: Copy
+      name: Copy
       uses: andstor/copycat-action@v3
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
