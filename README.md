@@ -19,6 +19,7 @@ uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_d
    * learn python best practices
    * learn how to use gh Actions CI to create the binaries insted of compiling them locally
 
+
 ### Instructions:
 uses python3 , so use python or python3 | pip or pip3 dependig on your configuration.
    ```bash
