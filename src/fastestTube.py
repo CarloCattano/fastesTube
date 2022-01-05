@@ -4,6 +4,7 @@
     of unnecessary things and god knows what else. created by Carlo Cattano 26/12/2021 
     https://github.com/CarloCattano  https://vueme.herokuapp.com/#/     ''' 
 
+
 from typing import Sized
 import dearpygui.dearpygui as dpg  #requires ffmpeg in PATH or binary in the same folder
 from yt_dlp import YoutubeDL
@@ -120,6 +121,7 @@ with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,he
     dpg.add_input_text(width=500,height=50,callback=setURL,tag="urlinput")
 
     #to do : find a way to size the popup window to fit the text
+    #https://github.com/hoffstadt/DearPyGui/issues/1523
     with dpg.popup(dpg.last_item(),tag="popup"):
         dpg.add_button(label="Paste",callback=pasteClipboard)
     
