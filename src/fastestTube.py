@@ -5,6 +5,11 @@
     https://github.com/CarloCattano  https://vueme.herokuapp.com/#/     ''' 
 
 
+#to do : find a way to size the popup window to fit the text
+#https://github.com/hoffstadt/DearPyGui/issues/1523
+#modal=True
+#is ffmpeg pip dependency necessary at all ?? 
+
 from typing import Sized
 import dearpygui.dearpygui as dpg  #requires ffmpeg in PATH or binary in the same folder
 from yt_dlp import YoutubeDL
@@ -12,7 +17,7 @@ import pyperclip
 
 
 dpg.create_context()
-dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="src/tube.ico",large_icon="src/tube.ico") 
+dpg.create_viewport(width=600, height=500,resizable=False,title="Fastest Tube", small_icon="resources/tube.ico",large_icon="resources/tube.ico") 
 dpg.setup_dearpygui()
 dpg.show_viewport()
 dpg.set_global_font_scale(1)
@@ -121,9 +126,6 @@ def pasteClipboard():
 with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,height=600,no_close=True,no_resize=True,no_move=True):   
     dpg.add_input_text(width=500,height=50,callback=setURL,tag="urlinput")
 
-    #to do : find a way to size the popup window to fit the text
-    #https://github.com/hoffstadt/DearPyGui/issues/1523
-    #modal=True
     with dpg.popup(dpg.last_item(),tag="popup"):
         dpg.add_button(label="Paste",callback=pasteClipboard)
     
