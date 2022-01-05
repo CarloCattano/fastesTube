@@ -8,17 +8,17 @@ jobs:
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
-    - name: Create folder
-      run: |
-        echo "hello"
-        ls -a .
-        mkdir -p ./dist
-    - uses: actions/checkout@v1
-    - name: copy file
-      uses: canastro/copy-file-action@master
-      with:
-        source: "./src/tube.ico"
-        target: "./dist"
+    # - name: Create folder
+    #   run: |
+    #     echo "hello"
+    #     ls -a .
+    #     mkdir -p ./dist
+    # - uses: actions/checkout@v1
+    # - name: copy file
+    #   uses: canastro/copy-file-action@master
+    #   with:
+    #     source: "./src/tube.ico"
+    #     target: "./dist"
 
     - name: Create Release
       id: create_release
@@ -55,7 +55,7 @@ jobs:
         include:
           - os: windows-latest
             TARGET: windows
-            CMD_BUILD: pyinstaller -F -w -n fastesTube -i src/tube.ico src/fastestTube.py
+            CMD_BUILD: cp src/tube.ico dist/tube.ico && pyinstaller -F -w -n fastesTube -i src/tube.ico src/fastestTube.py
             OUT_FILE_NAME: fastesTube.exe
             ASSET_MIME: application/vnd.microsoft.portable-executable
           - os: macos-latest
