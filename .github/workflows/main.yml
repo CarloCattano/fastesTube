@@ -18,6 +18,13 @@ jobs:
       with:
         tag_name: ${{ github.event.head_commit.message }} #${{ github.ref }}
         release_name: "${{ github.event.head_commit.message }}" #Release ${{ github.ref }}
+        body: "Must have ffmpeg in same directory or in PATH
+                    Videos will download to the folder where the fastestTube is for now
+                    Built with CI (Github Actions) https://github.com/CarloCattano/fastesTube/actions
+
+                    Needs FFmpeg binaries to encode the videos/audios to mp3/mp4
+                    Can be downloaded from here for widows/MacOSX
+                    https://ffmpeg.org/download.html"
         draft: false
         prerelease: false
         
