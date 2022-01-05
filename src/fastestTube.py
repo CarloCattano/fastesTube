@@ -131,5 +131,7 @@ with dpg.window(tag="Primary Window",label="URL :",no_collapse=True,width=600,he
     with dpg.group(horizontal=True):
         dpg.add_text("Info",tag="dConsole")
 
+
+
 dpg.start_dearpygui()
 dpg.destroy_context()
