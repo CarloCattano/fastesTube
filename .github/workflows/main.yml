@@ -8,10 +8,11 @@ jobs:
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
+    - uses: actions/checkout@v1
     - name: copy file
       uses: canastro/copy-file-action@master
       with:
-        source: "src/tube.ico"
+        source: "./src/tube.ico"
         target: "./dist/tube.ico"
     - name: Create Release
       id: create_release
