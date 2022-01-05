@@ -7,6 +7,13 @@ on:
 
 jobs:
   createrelease:
+  - name: Copy
+  uses: andstor/copycat-action@v3
+  with:
+    personal_token: ${{ secrets.PERSONAL_TOKEN }}
+    src_path: ./src
+    dst_path: ./dist
+
     name: Create Release
     runs-on: [ubuntu-latest]
     steps:
@@ -27,8 +34,7 @@ jobs:
                     https://ffmpeg.org/download.html" 
         draft: false
         prerelease: false
-        
-        
+
     - name: Output Release URL File
       run: echo "${{ steps.create_release.outputs.upload_url }}" > release_url.txt
     - name: Save Release URL File for publish
