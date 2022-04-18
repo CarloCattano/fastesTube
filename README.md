@@ -10,7 +10,7 @@ uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_d
 * Download entire playlists
 * Download Video with or witout the audio
 ### to do's:
-   * Add a loading/waiting.. Visual feedback after button download button si pressed
+   * Add a loading/waiting.. Visual feedback after download button is pressed
    * Add a finished mesagge after encoding is done
    * Make a better UI
    * Choose ouput folder and name with default to video Title and current folder
