@@ -16,7 +16,7 @@ uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_d
    * Choose ouput folder and name with default to video Title and current folder
    * create automatic fading for songs between playlists
    * learn python best practices
-   * learn how to use gh Actions CI to create the binaries insted of compiling them locally
+   * ~~learn how to use gh Actions CI to create the binaries insted of compiling them locally
    * ~~try to create binaries for windows and mac OSX and add to Releases~~
    * ~~Download entire playlists~~
    * ~~Implement community Feature requests like(Download Video without audio)~~ 
