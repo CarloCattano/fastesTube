@@ -1,4 +1,4 @@
-# Fastest youtube audio / video Downloader
+# Fastest audio / video Downloader
 uses **[dearpygui](https://pypi.org/project/dearpygui/#dear-pygui)** and **[yt_dlp](https://pypi.org/project/yt-dlp/)** . **[ffmpeg](https://ffmpeg.org/)** for encoding
 
 ![image](https://user-images.githubusercontent.com/17380530/147417071-0b75581f-d40f-4a3d-bfc7-0738694248ad.png)
